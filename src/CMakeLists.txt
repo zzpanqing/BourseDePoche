@@ -1,9 +1,10 @@
 cmake_minimum_required(VERSION 3.21)
 
 # output to _bin folder
+set(output_folder ${CMAKE_SOURCE_DIR}/../_bin)
 foreach(configuration ${CMAKE_CONFIGURATION_TYPES})
   string(TOUPPER ${configuration} upperConfiguration)
-  set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_${upperConfiguration} ${CMAKE_SOURCE_DIR}/../_bin)
+  set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_${upperConfiguration} ${output_folder})
 endforeach()
 
 project(BourseDePoche VERSION 0.1 LANGUAGES CXX)
